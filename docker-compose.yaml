@@ -1,0 +1,12 @@
+services:
+  tdm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tdm
+    ports:
+      - "5800:5800"
+    restart: unless-stopped
+    volumes:
+      - /path/settings.json:/settings.json
+      - /path/cookies.jar:/cookies.jar
