@@ -10,3 +10,11 @@ services:
     volumes:
       - /path/settings.json:/settings.json
       - /path/cookies.jar:/cookies.jar
+
+  tdm-restart:
+    image: docker:cli
+    container_name: tdm-restart
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: >
+      sh -c "while true; do docker restart tdm; sleep 86400; done"
