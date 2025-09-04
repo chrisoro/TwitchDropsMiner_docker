@@ -2,7 +2,6 @@
 
 set -e
 
-# Determine architecture
 ARCH=$(dpkg --print-architecture)
 
 case "$ARCH" in

@@ -10,7 +10,7 @@ repos:
       - id: fix-byte-order-marker
       - id: trailing-whitespace
   - repo: https://github.com/google/yamlfmt
-    rev: v0.17.2
+    rev: v0.19.0
     hooks:
       - id: yamlfmt
         args: [-conf, .yamlfmt.yaml]
@@ -19,8 +19,6 @@ repos:
     hooks:
       - id: shfmt
   - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.22
+    rev: 1.0.0
     hooks:
       - id: mdformat
-        additional_dependencies:
-          - mdformat-tables
